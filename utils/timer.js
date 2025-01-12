@@ -64,7 +64,7 @@
 //   return time;
 // };
 
-const MAX_TIME = 4; // 3600 * 24; // 최대시간은 24시간
+const MAX_TIME = 3600 * 24; // 최대시간은 24시간
 const timerDOM = document.getElementsByClassName("game-time")[0];
 
 export let isGameStart = false;
@@ -78,7 +78,7 @@ const convertToTwoNumber = (num) => {
   else return stringNum;
 };
 
-const getTimeString = (time) => {
+export const getTimeString = (time) => {
   const hours = Math.floor(time / 3600); // 시 계산
   time = time - hours * 3600;
   const minutes = Math.floor(time / 60); // 분 계산
